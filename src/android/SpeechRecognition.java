@@ -170,7 +170,7 @@ public class SpeechRecognition extends CordovaPlugin {
             // this will never happen
         }
         PluginResult pr = new PluginResult(PluginResult.Status.ERROR, event);
-        pr.setKeepCallback(false);
+        pr.setKeepCallback(true); // was false
         this.speechRecognizerCallbackContext.sendPluginResult(pr); 
     }
 
